@@ -14,3 +14,6 @@ exports.pool = new Pool({
 //   database: 'postgres',
 //   port: 5432,
 // })
+
+// https://project-pakam.vercel.app
+// https://pakam-caa42362631b.herokuapp.com
