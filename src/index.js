@@ -13,8 +13,7 @@ console.log('HEY')
 const allowCrossDomain = (req, res, next) => {
   res.header(`Access-Control-Allow-Origin`, `https://project-pakam.vercel.app`);
   res.header(`Access-Control-Allow-Methods`, `GET,PUT,POST,DELETE`);
-  res.header(`Access-Control-Allow-Headers`, `Content-Type`);
-  res.header(`Access-Control-Allow-Headers`, `Authorization`);
+  res.header(`Access-Control-Allow-Headers`, [`Authorization`, `Content-Type`]);
   next();
 };
 
