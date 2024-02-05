@@ -12,7 +12,8 @@ exports.isLoggedIn = (request, response, next) => {
 
     response.status(400).json({
       status: 'failed',
-      message: `You are not logged in!`
+      message: `You are not logged in!`,
+      data: { isLoggedIn: 0 },
     })
   }catch(error) {
     response.status(500).send({
@@ -29,6 +30,7 @@ exports.notLogged = (request, response, next) => {
     if(token) {
       if(verifyToken(token)) {
         return response.status(400).json({
+          data: { isLoggedIn: 1 },
           status: 'failed',
           message: `You are already logged in!`
         })
