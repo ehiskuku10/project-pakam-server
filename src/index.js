@@ -17,7 +17,7 @@ app.use(
   })
 )
 
-app.use('/', (req, res) => res.status(200).send('Welcome to Pakam API'))
+app.get('/', (req, res) => res.status(200).send('Welcome to Pakam API'))
 app.use('/user', userRouter)
 app.use(Error404Handler)
 
