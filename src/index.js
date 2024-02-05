@@ -9,6 +9,7 @@ const app = express()
 const port = process.env.PORT || 3002
 
 // app.use(cors())
+console.log('HEY')
 const allowCrossDomain = (req, res, next) => {
   res.header(`Access-Control-Allow-Origin`, `https://project-pakam.vercel.app`);
   res.header(`Access-Control-Allow-Methods`, `GET,PUT,POST,DELETE`);
