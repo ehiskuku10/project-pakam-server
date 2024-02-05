@@ -8,10 +8,7 @@ require('dotenv').config()
 const app = express()
 const port = process.env.PORT || 3002
 
-app.use(cors({
-  credentials: true,
-  origin: true
-}))
+// app.use(cors())
 app.use(bodyParser.json())
 
 app.use(
