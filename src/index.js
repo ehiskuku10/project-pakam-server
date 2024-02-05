@@ -10,7 +10,7 @@ const port = process.env.PORT || 3002
 
 app.use(cors({
   credentials: true,
-  origin: '*'
+  origin: true
 }))
 app.use(bodyParser.json())
 
