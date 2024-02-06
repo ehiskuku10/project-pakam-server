@@ -16,7 +16,6 @@ exports.isLoggedIn = (request, response, next) => {
       data: { isLoggedIn: 0 },
     })
   }catch(error) {
-    console.log('HAPPENED HERE');
     response.status(500).send({
       status: 'failed',
       message: `Something we didn't expect has happened!`

@@ -14,7 +14,7 @@ const {
 
 const router = express.Router();
 
-router.get('/init', createUserTable)
+router.get('/init', notLogged, createUserTable)
 router.get('/', isLoggedIn, getUsers)
 router.post('/login', notLogged, logIn)
 router.get('/:id', isLoggedIn, getUserById)
